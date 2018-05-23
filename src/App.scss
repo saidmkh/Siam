@@ -1,0 +1,405 @@
+@import "bootstrap-grid.min.css";
+@import "bootstrap-reboot.css";
+
+$orange: #FF991D;
+$menu-black: #31393E;
+
+@mixin personIco($backurl) {
+  background-image: $backurl;
+  background-size: auto 3.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  height: 5rem;
+  background-color: honeydew;
+  border-bottom: 2px solid orange;
+  font-size: 1.5rem;
+}
+
+ul {
+  -webkit-padding-start: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.pos-rigth {
+  position: absolute;
+  right: 0;
+}
+
+.header-block {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.static-header__name {
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  background-color: $orange;
+  height: 80%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+.header-middle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-menu__link {
+  height: 100%;
+  width: 6rem;
+  background-image: url("../src/assets/img/menu.png");
+  background-position: center;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+}
+
+.header-home__link {
+  height: 100%;
+  width: 6rem;
+  background-image: url("../src/assets/img/home.png");
+  background-position: center;
+  background-size: 3rem;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  background-color: honeydew;
+  flex-grow: 1;
+}
+
+.person-block {
+  width: 100%;
+}
+
+.panel-block {
+  width: 100%;
+}
+
+.nav__block li:nth-child(2n+1) {
+  background-color: white;
+}
+
+.user--item {
+  padding-top: 10px;
+}
+
+.nav-item__block {
+  min-height: 6rem;
+  display: flex;
+}
+
+.user--item--info {
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.user--item__number {
+  font-size: 1.25rem;
+  margin-right: 10px;
+  height: 1.25rem;
+}
+
+.user--item__name {
+  font-size: 2rem;
+  height: 2rem;
+}
+
+.bottom-menu {
+  height: 5rem;
+  width: 100vw;
+
+  div:nth-child(2) {
+    border-right: 2px solid gainsboro;
+    border-left: 2px solid gainsboro;
+  }
+}
+
+.bottom-menu--item {
+  cursor: pointer;
+  background-color: #212529;
+  display: flex;
+  height: 50px;
+
+  svg {
+    height: 35px;
+    width: 35px;
+    margin: auto;
+    display: flex;
+
+    path {
+      margin: auto;
+    }
+  }
+
+  &:hover {
+    background-color: orange;
+  }
+
+  &:hover path{
+      fill: $menu-black;
+      stroke: $menu-black;
+  }
+}
+
+.load-borders {
+  width: 100%;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.border-first {
+  height: 3px;
+  background-color: $orange;
+}
+
+.border-second {
+  width: 45%;
+  height: 3px;
+  background-color: $menu-black;
+}
+
+.border-fill {
+  width: 55%;
+}
+
+.border-fill2 {
+  width: 45%;
+}
+
+
+/*--------------------------LOGIN-PAGE----------------------------*/
+
+
+.login-page {
+  background-color: $orange;
+  height: 100vh;
+  background-image: url(../src/assets/img/thapawong_2.png);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 25rem auto;
+}
+
+.login-block {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100%;
+}
+
+.login__title {
+  width: 100%;
+  height: 8rem;
+  line-height: 8rem;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+.login-form {
+  height: 60vh;
+  position: absolute;
+  display: flex;
+  bottom: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.form--item {
+  width: 100%;
+  position: relative;
+}
+
+.login-form--label {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1.5rem solid transparent;
+  border-left: 1.5rem solid black;
+  z-index: 2;
+}
+
+.login-form--input {
+  padding: 1.5rem 1rem 1.5rem 4rem;
+  font-size: 2rem;
+  outline: none;
+  width: 100%;
+
+  &::-webkit-input-placeholder { font-size: 2rem; }
+  &::-moz-placeholder          { font-size: 2rem;}
+  &:-moz-placeholder           { font-size: 2rem; }
+  &:-ms-input-placeholder      { font-size: 2rem; }
+}
+
+.login-btn__block {
+  padding-top: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.login-btn {
+  width: 9.5rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  background-color: black;
+  background-image: url(../src/assets/img/arrowWhite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5rem auto;
+  cursor: pointer;
+}
+
+.login-forgotten {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.login-forgotten--text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.person-page__name {
+  height: 100%;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+.person-page__back {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-image: url("../src/assets/img/prev.svg");
+  background-repeat: no-repeat;
+  background-size: auto 2rem;
+  background-position: center;
+  cursor: pointer;
+}
+
+.person__ico {
+  min-height: 6rem;
+  width: 7rem;
+}
+
+.person-field {
+  max-width: 75%;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 6rem;
+}
+
+.person__login--ico {
+  @include personIco( url("../src/assets/img/userNameIcon.svg"))
+}
+
+.person__name--ico {
+  @include personIco( url("../src/assets/img/user.svg"))
+}
+
+.person__number--ico {
+  @include personIco( url("../src/assets/img/telephone.svg"))
+}
+
+.person__email--ico {
+  @include personIco( url("../src/assets/img/mail.svg"))
+}
+
+.person__geo--ico {
+  @include personIco( url("../src/assets/img/pin.svg"))
+}
+
+.person__hash--ico {
+  @include personIco( url("../src/assets/img/hashGrey.svg"))
+}
+
+.person__tasks--ico {
+  @include personIco( url("../src/assets/img/logbookGrey.svg"))
+}
+
+.person__group--ico {
+  @include personIco( url("../src/assets/img/curingStation.svg"))
+}
+
+.person__farm--ico {
+  @include personIco( url("../src/assets/img/leaf.svg"))
+}
+
+.person__export--ico {
+  @include personIco( url("../src/assets/img/export.svg"))
+}
+
+.person__block--ico {
+  @include personIco( url("../src/assets/img/lockk.svg"))
+}
+
+.person__logout--ico {
+  @include personIco( url("../src/assets/img/logout.svg"))
+}
+
+.edit-person-block {
+  padding-top: 5rem;
+}
+
+.edit-btn {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
+  background-color: $orange;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.person-next {
+  position: absolute;
+  right: 20px;
+  height: 6rem;
+  width: 3rem;
+  background-image: url("../src/assets/img/next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 2.5rem;
+  cursor: pointer;
+}
